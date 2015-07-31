@@ -27,7 +27,7 @@ def find_best_app(module):
     """Given a module instance this tries to find the best possible
     application in the module or raises an exception.
     """
-    from . import Flask
+    from flask import Flask
 
     # Search for the most common names first.
     for attr_name in 'app', 'application':
@@ -79,6 +79,7 @@ def prepare_exec_for_file(filename):
 def locate_app(app_id):
     """Attempts to locate the application."""
     __traceback_hide__ = True
+    print(app_id)
     if ':' in app_id:
         module, app_obj = app_id.split(':', 1)
     else:
