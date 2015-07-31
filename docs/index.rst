@@ -31,25 +31,24 @@ The Flask-CLI package is on PyPI so all you need is:
 Usage
 =====
 
-Use this library as fallback when importing from ``flask.cli``.
+Initialize the extension like this:
 
 .. code-block:: python
 
-   try:
-       from flask.cli import FlaskGroup
-   except ImportError
-       from flask_cli.cli import FlaskGroup
+   from flask import Flask
+   from flask_cli import FlaskCLI
+   app = Flask('myapp')
+   FlaskCLI(app)
 
-Note Flask-CLI is only a backport of ``flask.cli``. Most noteably, there's no integration into the Flask application object. E.g. the following won't work:
+   @app.cli.command()
+   def mycmd():
+       click.echo("Test")
+
+Import from this library instead of ``flask.cli``:
 
 .. code-block:: python
 
-    app = Flask(__name__)
-
-    @app.cli.command()
-    def initdb():
-        """Initialize the database."""
-        print 'Init the db'
+   from flask_cli import FlaskGroup
 
 .. include:: ../CHANGES
 

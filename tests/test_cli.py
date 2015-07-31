@@ -126,6 +126,3 @@ def test_flaskgroup():
     result = runner.invoke(cli, ['test'])
     assert result.exit_code == 0
     assert result.output == 'flaskgroup\n'
-
-
-
