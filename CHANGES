@@ -1,6 +1,13 @@
 Changes
 =======
 
-Version 0.1 (released 2015-07-31)
+Version 0.2.0 (released 2015-07-31)
+
+- Adds FlaskCLI extension to support app.cli.
+
+- Changes default imports from flask_cli.cli to flask_cli and relies on Flask's
+  classes when v1.0 is installed.
+
+Version 0.1.0 (released 2015-07-31)
 
 - Initial public release
