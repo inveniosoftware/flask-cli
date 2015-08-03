@@ -43,6 +43,7 @@ The following files are under different license/copyright::
 
     flask_cli/cli.py
     flask_cli/_compat.py
+    flask_cli/app.py
 
 Copyright (c) 2015 by Armin Ronacher and contributors.
 

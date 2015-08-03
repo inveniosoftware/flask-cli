@@ -9,6 +9,7 @@
 
 """Flask extension to enable CLI."""
 
+import types
 from . import AppGroup
 
 
@@ -43,6 +44,16 @@ class FlaskCLI(object):
         if 'flask-cli' in app.extensions:
             raise RuntimeError("Flask-CLI application already initialized")
         app.extensions['flask-cli'] = self
+        self.setup_pre10(app)
 
-        if not hasattr(app, 'cli'):
-            app.cli = AppGroup(app)
+    def setup_pre10(self, app):
+        """Setup Flask pre-1.0 application object."""
+        if hasattr(app, 'cli'):
+            return
+
+        from flask_cli.app import make_shell_context, shell_context_processor
+        app.cli = AppGroup(app)
+        app.shell_context_processors = []
+        app.make_shell_context = types.MethodType(make_shell_context, app)
+        app.shell_context_processor = types.MethodType(
+            shell_context_processor, app)

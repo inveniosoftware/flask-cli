@@ -28,7 +28,24 @@ def test_ext_init():
     ext = FlaskCLI()
     ext.init_app(app)
     assert isinstance(app.cli, click.Group)
+    assert app.shell_context_processors == []
     pytest.raises(RuntimeError, ext.init_app, app)
+
+
+def test_ext_shelcontext():
+    """Test creating commands."""
+    app = Flask('exttest')
+    cli = FlaskCLI(app)
+
+    @app.shell_context_processor
+    def myshellctx():
+        return {'cli': cli}
+
+    assert len(app.shell_context_processors) == 1
+    rv = app.make_shell_context()
+    assert rv['app'] == app
+    assert rv['cli'] == cli
+    assert 'g' in rv
 
 
 def test_ext_cmd():
