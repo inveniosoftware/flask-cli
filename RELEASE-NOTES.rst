@@ -1,8 +1,8 @@
 =======================
- Flask-CLI v0.2.0
+ Flask-CLI v0.2.1
 =======================
 
-Flask-CLI v0.2.0 was released on July 31, 2015.
+Flask-CLI v0.2.1 was released on August 3, 2015.
 
 About
 -----
@@ -17,16 +17,16 @@ Installation
 What's new
 ----------
 
-- Adds FlaskCLI extension to support app.cli.
+- Adds support for specifying shell context processors.
 
-- Changes default imports from flask_cli.cli to flask_cli and relies on Flask's
-  classes when v1.0 is installed.
+- Fixes bug with shell command due to missing support for shell context
+  processors.
 
 
 Documentation
 -------------
 
-   http://flask-cli.readthedocs.org/en/v0.2.0
+   http://flask-cli.readthedocs.org/en/v0.2.1
 
 Homepage
 --------

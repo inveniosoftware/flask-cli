@@ -1,6 +1,13 @@
 Changes
 =======
 
+Version 0.2.1 (released 2015-08-03)
+
+- Adds support for specifying shell context processors.
+
+- Fixes bug with shell command due to missing support for shell context
+  processors.
+
 Version 0.2.0 (released 2015-07-31)
 
 - Adds FlaskCLI extension to support app.cli.
