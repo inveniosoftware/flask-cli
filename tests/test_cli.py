@@ -9,14 +9,15 @@
 
 """Tests for Flask backport."""
 
-from __future__ import absolute_import, print_function, unicode_literals
+from __future__ import absolute_import, print_function
 
 import click
 import pytest
 from click.testing import CliRunner
 from flask import Flask, current_app
-from flask_cli.cli import NoAppException, ScriptInfo, find_best_app, \
-    locate_app, with_appcontext, AppGroup, FlaskGroup, script_info_option
+
+from flask_cli.cli import AppGroup, FlaskGroup, NoAppException, ScriptInfo, \
+    find_best_app, locate_app, script_info_option, with_appcontext
 
 
 def test_find_best_app():

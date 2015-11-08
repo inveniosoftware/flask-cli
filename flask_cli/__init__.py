@@ -15,7 +15,7 @@ Full documentation of Flask's new click command line integration can be found
 at: http://flask.pocoo.org/docs/dev/cli/.
 """
 
-from __future__ import absolute_import, print_function, unicode_literals
+from __future__ import absolute_import, print_function
 
 try:
     from flask.cli import AppGroup, DispatchingApp, FlaskGroup, \

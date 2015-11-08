@@ -11,8 +11,8 @@
 
 import os
 import sys
-from threading import Lock, Thread
 from functools import update_wrapper
+from threading import Lock, Thread
 
 import click
 

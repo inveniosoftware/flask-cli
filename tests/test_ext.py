@@ -9,12 +9,13 @@
 
 """Tests for extension."""
 
-from __future__ import absolute_import, print_function, unicode_literals
+from __future__ import absolute_import, print_function
 
 import click
 import pytest
 from click.testing import CliRunner
 from flask import Flask, current_app
+
 from flask_cli import FlaskCLI, ScriptInfo
 
 

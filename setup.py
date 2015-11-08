@@ -17,7 +17,6 @@ from setuptools.command.test import test as TestCommand
 
 
 class PyTest(TestCommand):
-
     """Integration of PyTest with setuptools."""
 
     user_options = [('pytest-args=', 'a', 'Arguments to pass to py.test')]
@@ -36,16 +35,16 @@ class PyTest(TestCommand):
     def finalize_options(self):
         """Finalize options."""
         TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
+        if hasattr(self, '_test_args'):
+            self.test_suite = ''
+        else:
+            self.test_args = []
+            self.test_suite = True
 
     def run_tests(self):
         """Run tests."""
         # import here, cause outside the eggs aren't loaded
         import pytest
-        import _pytest.config
-        pm = _pytest.config.get_plugin_manager()
-        pm.consider_setuptools_entrypoints()
         errno = pytest.main(self.pytest_args)
         sys.exit(errno)
 
@@ -58,12 +57,26 @@ with open(os.path.join('flask_cli', 'version.py'), 'rt') as f:
 
 
 tests_require = [
+    'check-manifest>=0.25',
+    'coverage>=4.0',
+    'isort>=4.2.2',
+    'pep257>=0.7.0',
     'pytest-cache>=1.0',
     'pytest-cov>=1.8.0',
     'pytest-pep8>=1.0.6',
-    'pytest>=2.6.1',
-    'coverage<4.0a1',
+    'pytest>=2.8.0',
 ]
+
+extras_require = {
+    'docs': [
+        'Sphinx>=1.3',
+    ],
+    'tests': tests_require,
+}
+
+extras_require['all'] = []
+for reqs in extras_require.values():
+    extras_require['all'].extend(reqs)
 
 setup(
     name='Flask-CLI',
@@ -82,15 +95,19 @@ setup(
         'Flask>=0.10',
         'click>=2.0',
     ],
+    extras_require=extras_require,
     tests_require=tests_require,
     cmdclass={'test': PyTest},
     classifiers=[
         'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Topic :: Utilities',
+        'Development Status :: 5 - Production/Stable',
     ],
     entry_points={
         'console_scripts': [

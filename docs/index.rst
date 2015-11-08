@@ -35,6 +35,7 @@ Initialize the extension like this:
 
 .. code-block:: python
 
+   import click
    from flask import Flask
    from flask_cli import FlaskCLI
    app = Flask('myapp')
@@ -44,7 +45,7 @@ Initialize the extension like this:
    def mycmd():
        click.echo("Test")
 
-Import from this library instead of ``flask.cli``:
+Import from this library instead of ``flask.cli``, e.g.:
 
 .. code-block:: python
 

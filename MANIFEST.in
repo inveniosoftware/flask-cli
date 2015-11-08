@@ -6,9 +6,11 @@
 # Flask-CLI is free software; you can redistribute it and/or modify it under
 # the terms of the Revised BSD License; see LICENSE file for more details.
 
-include LICENSE AUTHORS CHANGES README.rst
-include .coveragerc run-tests.sh pytest.ini tox.ini
+include LICENSE AUTHORS CHANGES README.rst CONTRIBUTING.rst RELEASE-NOTES.rst
+include .coveragerc run-tests.sh pytest.ini tox.ini .editorconfig
 include docs/*.rst docs/*.py docs/Makefile
 include tests/*.py
+include .dockerignore docker-compose.yml Dockerfile
+include requirements.devel.txt
 recursive-include docs/_themes *.py *.css *.css_t *.conf *.html README
 recursive-include docs/_templates *.html

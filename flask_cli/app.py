@@ -10,7 +10,9 @@
 """
 
 from functools import update_wrapper
+
 from flask.globals import g
+
 
 def setupmethod(f):
     """Wraps a method so that it performs a check in debug mode if the

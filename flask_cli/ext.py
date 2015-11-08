@@ -10,11 +10,11 @@
 """Flask extension to enable CLI."""
 
 import types
+
 from . import AppGroup
 
 
 class FlaskCLI(object):
-
     """Flask-CLI extension.
 
     Initialization of the extension:
