@@ -31,6 +31,10 @@ Initialize the extension like this:
    def mycmd():
        click.echo("Test")
 
+   @app.shell_context_processor
+   def myctx():
+       return {'myvar': 'value'}
+
 Import from this library instead of ``flask.cli``:
 
 .. code-block:: python
