@@ -79,7 +79,6 @@ def prepare_exec_for_file(filename):
 def locate_app(app_id):
     """Attempts to locate the application."""
     __traceback_hide__ = True
-    print(app_id)
     if ':' in app_id:
         module, app_obj = app_id.split(':', 1)
     else:
