@@ -18,6 +18,14 @@ from flask import Flask, current_app
 
 from flask_cli.cli import AppGroup, FlaskGroup, NoAppException, ScriptInfo, \
     find_best_app, locate_app, script_info_option, with_appcontext
+from flask_cli.ext import FlaskCLI
+
+
+def test_cli_name():
+    """Test the name of the CLI."""
+    from app import testapp
+    FlaskCLI(testapp)
+    assert testapp.cli.name == testapp.name
 
 
 def test_find_best_app():

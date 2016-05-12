@@ -52,7 +52,7 @@ class FlaskCLI(object):
             return
 
         from flask_cli.app import make_shell_context, shell_context_processor
-        app.cli = AppGroup(app)
+        app.cli = AppGroup(app.name)
         app.shell_context_processors = []
         app.make_shell_context = types.MethodType(make_shell_context, app)
         app.shell_context_processor = types.MethodType(
