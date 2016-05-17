@@ -1,8 +1,8 @@
 =======================
- Flask-CLI v0.2.1
+ Flask-CLI v0.3.0
 =======================
 
-Flask-CLI v0.2.1 was released on August 3, 2015.
+Flask-CLI v0.3.0 was released on May 17, 2016.
 
 About
 -----
@@ -26,7 +26,7 @@ What's new
 Documentation
 -------------
 
-   http://flask-cli.readthedocs.org/en/v0.2.1
+   http://pythonhosted.org/Flask-CLI/
 
 Homepage
 --------
