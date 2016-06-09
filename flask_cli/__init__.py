@@ -19,26 +19,27 @@ from __future__ import absolute_import, print_function
 
 try:
     from flask.cli import AppGroup, DispatchingApp, FlaskGroup, \
-        NoAppException, ScriptInfo, app_option, cli, debug_option, \
+        NoAppException, ScriptInfo, cli, \
         find_best_app, locate_app, main, pass_script_info, \
-        prepare_exec_for_file, run_command, script_info_option, \
-        set_app_value, set_debug_value, shell_command, with_appcontext
+        prepare_exec_for_file, run_command, \
+        shell_command, with_appcontext
 except ImportError:
     from flask_cli.cli import AppGroup, DispatchingApp, FlaskGroup, \
-        NoAppException, ScriptInfo, app_option, cli, debug_option, \
+        NoAppException, ScriptInfo, cli, \
         find_best_app, locate_app, main, pass_script_info, \
-        prepare_exec_for_file, run_command, script_info_option, \
-        set_app_value, set_debug_value, shell_command, with_appcontext
+        prepare_exec_for_file, run_command, \
+        shell_command, with_appcontext
 
 from .ext import FlaskCLI
+from .helpers import get_debug_flag
 from .version import __version__
 
 __all__ = (
     '__version__', 'FlaskCLI', 'AppGroup', 'DispatchingApp', 'FlaskGroup',
-    'NoAppException', 'ScriptInfo', 'app_option', 'cli', 'debug_option',
+    'NoAppException', 'ScriptInfo', 'cli', 'get_debug_flag',
     'find_best_app', 'locate_app', 'main', 'pass_script_info',
-    'prepare_exec_for_file', 'run_command', 'script_info_option',
-    'set_app_value', 'set_debug_value', 'shell_command', 'with_appcontext',
+    'prepare_exec_for_file', 'run_command',
+    'shell_command', 'with_appcontext',
 )
 
 if __name__ == '__main__':
