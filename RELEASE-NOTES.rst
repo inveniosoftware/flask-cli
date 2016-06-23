@@ -1,27 +1,34 @@
-=======================
- Flask-CLI v0.3.0
-=======================
+==================
+ Flask-CLI v0.4.0
+==================
 
-Flask-CLI v0.3.0 was released on May 17, 2016.
+Flask-CLI v0.4.0 was released on June 28, 2016.
 
 About
 -----
 
-Flask-CLI is a backport of Flask 1.0 new click integration to v0.10.
+Flask-CLI is a backport of Flask v0.11+ new Click integration to v0.10.
 
 Installation
 ------------
 
-   $ pip install flask-cli
+   $ pip install flask-cli==0.4.0
 
 What's new
 ----------
 
-- Adds support for specifying shell context processors.
+- Adds a --version switch to Flask CLI.
 
-- Fixes bug with shell command due to missing support for shell context
-  processors.
+- Updates help to `> set FLASK_APP=hello.py`.
 
+- Adds plugin support to the CLI.
+
+- Updates docs to the new CLI patterns.
+
+- Removes Python 2.6 and adds Python 3.5 to Tox configuration to match
+  Travis config.
+
+- Implements simplified CLI interface.
 
 Documentation
 -------------

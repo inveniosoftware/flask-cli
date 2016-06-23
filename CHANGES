@@ -1,6 +1,21 @@
 Changes
 =======
 
+Version 0.4.0 (released 2016-06-28)
+
+- Adds a --version switch to Flask CLI.
+
+- Updates help to `> set FLASK_APP=hello.py`.
+
+- Adds plugin support to the CLI.
+
+- Updates docs to the new CLI patterns.
+
+- Removes Python 2.6 and adds Python 3.5 to Tox configuration to match
+  Travis config.
+
+- Implements simplified CLI interface.
+
 Version 0.3.0 (released 2016-05-17)
 
 - Werkzeug should not block propagated exceptions from Flask.
