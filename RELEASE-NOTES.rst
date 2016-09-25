@@ -33,7 +33,7 @@ What's new
 Documentation
 -------------
 
-   http://pythonhosted.org/Flask-CLI/
+   https://flask-cli.readthedocs.io/
 
 Homepage
 --------
@@ -44,6 +44,6 @@ Happy hacking and thanks for flying Flask-CLI.
 
 | Invenio Development Team
 |   Email: info@inveniosoftware.org
-|   Twitter: http://twitter.com/inveniosoftware
-|   GitHub: http://github.com/inveniosoftware
+|   Twitter: https://twitter.com/inveniosoftware
+|   GitHub: https://github.com/inveniosoftware
 |   URL: http://inveniosoftware.org

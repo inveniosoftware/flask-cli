@@ -8,7 +8,7 @@
 
 include LICENSE AUTHORS CHANGES README.rst CONTRIBUTING.rst RELEASE-NOTES.rst
 include .coveragerc run-tests.sh pytest.ini tox.ini .editorconfig
-include docs/*.rst docs/*.py docs/Makefile
+include docs/*.rst docs/*.py docs/Makefile docs/requirements.txt
 include tests/*.py
 include .dockerignore docker-compose.yml Dockerfile
 include requirements.devel.txt

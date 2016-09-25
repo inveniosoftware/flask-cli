@@ -5,7 +5,8 @@
 About
 =====
 
-Flask-CLI is a backport of Flask 1.0 new click integration to Flask 0.10. Do not install this package if you use Flask 1.0+.
+Flask-CLI is a backport of Flask 1.0 new click integration to Flask 0.10.
+Do not install this package if you use Flask 1.0+.
 
 Installation
 ============
@@ -44,7 +45,7 @@ Import from this library instead of ``flask.cli``:
 Documentation
 =============
 
-Documentation is readable at http://flask-cli.readthedocs.org or can be
+Documentation is readable at https://flask-cli.readthedocs.io/ or can be
 build using Sphinx: ::
 
     pip install Sphinx
