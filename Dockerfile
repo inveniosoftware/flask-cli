@@ -1,8 +1,5 @@
-# This file is part of Flask-CLI
-# Copyright (C) 2015 CERN.
-#
-# Flask-CLI is free software; you can redistribute it and/or modify it under
-# the terms of the Revised BSD License; see LICENSE file for more details.
+# SPDX-FileCopyrightText: 2015 CERN.
+# SPDX-License-Identifier: BSD-3-Clause
 
 # Use Python-2.7:
 FROM python:2.7

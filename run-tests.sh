@@ -1,10 +1,6 @@
 #!/bin/sh
-#
-# This file is part of Flask-CLI
-# Copyright (C) 2015 CERN.
-#
-# Flask-CLI is free software; you can redistribute it and/or modify it under
-# the terms of the Revised BSD License; see LICENSE file for more details.
+# SPDX-FileCopyrightText: 2015 CERN.
+# SPDX-License-Identifier: BSD-3-Clause
 
 pydocstyle flask_cli/__init__.py flask_cli/ext.py flask_cli/version.py \
   flask_cli/version.py tests/*.py && \
